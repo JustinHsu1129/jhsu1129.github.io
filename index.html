@@ -25,24 +25,24 @@
 </section>
 <section id="main-content">
 	<div class="text-intro">
-		<h2>Featured Project: 32 Bit MIPS CPU</h2>
+		<h2>Featured Project: 8x8 Systolic Matrix Multiplier</h2>
 		<div class="text-center-index">
-			<p><a href="https://github.com/JustinHsu1129/32-Bit-CPU" target="_blank">Verilog and TCL files on Github</a></p>
+			<p><a href="https://github.com/JustinHsu1129/Systolic-Matrix-Multiplier" target="_blank">Verilog and TCL files on Github</a></p>
 	</div>
 	<div class="columns features divider-bottom">
 		<div class="one-half first">
-			<h3>CPU Features</h3>
-			<p>This is a 32 bit MIPS CPU that features 5 a stage pipeline, with special modules for extral control and dealing with data hazards.<!-- <a href="https://docs.google.com/document/d/e/LinkToTheReport" target="_blank">Read more...</a> --> </p>
+			<h3>Multiplier Features</h3>
+			<p>This is a 8x8, 16 bit systolic matrix multiplier. This multiplier takes ~200ns for matrix calcuations, as opposed to ~5ms for a normal matrix calculator. Using individual processing elements, it massive improves on matrix calculation speed by pipelining the data through each processing element, instead of re-fetching from memory, drastically improving throughput.<!-- <a href="https://docs.google.com/document/d/e/LinkToTheReport" target="_blank">Read more...</a> --> </p>
 			<br>
-			<img class = "small-border" src = "images/cpu routing density.png">
-			<p>This is the routing density given by the openroad GUI.</p>
+			<img class = "small-border" src = "images/systolic matrix multiplier.png">
+			<p>This is the synthesis as given by the Synopsys Design Compiler GUI.</p>
 		</div>
 		<div class="one-half">
 			<h3>Layout</h3>
-			<p>Using OpenLane2, this CPU was laid out with space and power efficiency in mind. Future work includes optimized PDN, clock gating, and different voltage domains.</p>
+			<p>Using OpenLane2, two versions of this matrix multiplier was designed. The two versions differ in how the multiply accumulate units are designed. The structural version uses a radix-2 kogge stone adder with a wallace tree multiplier implementing Booth's algorithm, while the behavioral design uses what the synthesizer infers.</p>
 			<br>
-			<img class = "small-border" src = "images/cpu layout.png">
-			<p>This is the layout of the CPU given by Klayout.</p>
+			<img class = "small-border" src = "images/systolic_efficient.png">
+			<p>This is the layout of the structural version of the design given by KLayout.</p>
 		</div>
 	</div>
 </section>
@@ -55,8 +55,8 @@
 	</div>
 	<div class="columns features">
 		<div class="one-third first">
-			<h3>Systolic Matrix Multiplier<br>[<a href="https://github.com/JustinHsu1129/Systolic-Matrix-Multiplier" target="_blank">Code</a>]</h3>
-			<p>Project in verilog of a typical 8x8 matrix multiplier operating in the nested loop fashion, and a systolic matrix multiplier. Comparison of overall performance between the two systems and layout of the systolic matrix multiplier system in OpenLane2 with custom floorplanning. Working on optimizing input/output pin placement and developing a more efficient clock tree.</p>
+			<h3>32 Bit MIPS CPU<br>[<a href="https://github.com/JustinHsu1129/32-Bit-CPU" target="_blank">Code</a>]</h3>
+			<p>A 32-bit 5-stage pipelined MIPS processor is built in Verilog, improving performance but requiring hazard-handling modules (forwarding, flushing, stalling) to manage pipeline challenges. Using OpenLane2, this CPU was laid out with space and power efficiency in mind. Future work includes optimized PDN, clock gating, and different voltage domains.</p>
 		</div>
 		<div class="one-third">
 			<h3>Configurable Logic Block Verification Tools<br>[<a href="https://github.com/JustinHsu1129/EEC283-Term-Project" target="_blank">Code</a>]</h3>
@@ -66,7 +66,7 @@
 		</div>
 		<div class="one-third">
 			<h3>Digital Circuit Design<br>[<a href="https://github.com/JustinHsu1129/EEC-118" target="_blank">Github</a>]</h3>
-			<p>An assortment of digital circuit designs done in Cadence Virtuoso. Performed for my digital IC class. Manually laid out circuits by drawing the various metal, n-well, p-well, and poly layers and then performed SPICE simulation to ensure expected functionality given voltage levels. Lab reports with graphs of the SPICE simulation using Spectre are also included. I was unable to export the raw Virtuoso files from the school's computers, so a screenshot on the report is the best I got.</p>
+			<p>An assortment of digital circuit designs done in Cadence Virtuoso. Performed for my digital IC class. Manually laid out circuits by drawing the various metal, n-well, p-well, and poly layers and then performed SPICE simulation to ensure expected functionality given voltage levels. Lab reports with graphs of the SPICE simulation using Spectre are also included.</p>
 		</div>
 		<div class="one-third first">
 			<h3>Verilog Designs<br>[<a href="https://github.com/JustinHsu1129/EEC-180-Labs" target="_blank">Code</a>]</h3>
@@ -101,7 +101,7 @@
 	</div>
 </section>
 <footer>
-	<div class="copyright"><small>Copyright. All Rights Reserved | Original design by François Martin / Supview. Last updated Sep 2025.</small></div>
+	<div class="copyright"><small>Copyright. All Rights Reserved | Original design by François Martin / Supview. Last updated Oct 2025.</small></div>
 </footer>
 </body>
 </html>
