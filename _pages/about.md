@@ -1,35 +1,27 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Justin Hsu"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+I am a fourth year Electrical Engineering student at UC Davis with plans to pursue a Master degree in electrical engineering. I am broadly interested in physical design and VLSI. I am particularly interested in accelerator design for machine learning algorithms and low power IC design. My work focuses on the intersection between computer architecture and physical implementation. I am driven by the challenge of designing domain specific architectures, and specifically aiming to achieve maximum performance in a low power package.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
-
-A data-driven personal website
+Work Experience
 ======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+1. RTL Design Engineer-Lotus Communication Systems
+* Using the Xilinx Zynq 7000 SoC, I designed and implemented a digital FIR high pass and bandpass filter for cleaning recieved signals. Through Matlab simulation I found the necessary weights required to perform the digital filtering, and implemented the filters using verilog. I took advantage of the parallelism available on an FPGA-using a 4 stage pipelined transpose form filter.
+* My final project was designing and implementing a cascaded integrator-comb decimation filter in Verilog designed for resource constrained FPGA environments. The architecture features automated bit-growth calculation and pipelining. Additionally, I used scalable parameterization when designing this module so this design could be reused across different projects. Lastly, numerous architectural decisions were made in order to implement the CIC filter to be completely multiplier free.
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+2. PCB Design Engineer-Lotus Communication Systems
+* I designed a 4 layer PCB for a high frequency (~10GHz range) mixed signal two channel block up/down converter from schematics to physically soldering the components onto the board. Designing the schematics from OrCad, I was a key contributor to parts selection, and managed the bill of materials for sourcing availability. After, I designed the PCB using PADS. I carefully implemented a split grounding scheme and carefully managed return paths to prevent noise leakage from the digital blocks from coupling into the RF front end.
+* I designed multiple sub-modules of the PCB, including a custom loop filter, digital microcontroller control block, and RF block. This modular design strategy allowed more effective isolation of critical RF signal paths, and greatly helped when designing the power and ground planes.
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
-
-Getting started
+Senior Design Project-Live Video Feed Edge Detection Accelerator
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+My senior design project involves using an FPGA to design an accelerator for a live video feed edge detection algorithm, taking advantage of hardware parallelism for calculating gaussian blur and Sobel gradient. Additionally utilizing the onboard CPU to compute Hysteresis edge tracking through an algorithm written in C.
 
 Site-wide configuration
 ------
