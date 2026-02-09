@@ -20,5 +20,5 @@ Achieved physical verification closure by passing all DRC, LVS, and antenna chec
 
 ![3-To-8 Decoder Layout](https://justinhsu1129.github.io/jhsu1129.github.io/images/3-8%20decoder%20layout.jpg)
 
-![3-To-8 DecoderWaveform]https://justinhsu1129.github.io/jhsu1129.github.io(/images/decoder%20waveform.jpg)
+![3-To-8 DecoderWaveform](https://justinhsu1129.github.io/jhsu1129.github.io/images/decoder%20waveform.jpg)
 

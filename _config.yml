@@ -29,8 +29,12 @@ author:
   bio              : "4th Year Electrical Engineering Student"
   location         : "California"
   employer         : "UC Davis"
-  uri              : "https://www.linkedin.com/in/jhsu2022/"
-  email            : "jhsu2022@gmail.com" 
+  uri              : 
+  email            : "jhsu2022@gmail.com"
+  links:
+    - label: "LinkedIn"
+      url: "https://www.linkedin.com/in/jhsu2022/"
+      icon: "fab fa-fw fa-linkedin"
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
