@@ -1,6 +1,6 @@
 ---
 title: "32 Bit MIPS CPU"
-excerpt: "Designed a 32 bit MIPS CPU in Verilog and carried through physical design flow with OpenLane>"
+excerpt: "Designed a 32 bit MIPS CPU in Verilog and carried through physical design flow with OpenLane"
 collection: portfolio
 ---
 
