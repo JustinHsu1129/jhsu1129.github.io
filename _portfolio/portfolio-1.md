@@ -1,6 +1,6 @@
 ---
 title: "8 Bit Barrel Shifter"
-excerpt: "Implemented an 8 bit barrel shifter using Cadence Virtuoso<br/><img src='https://justinhsu1129.github.io/jhsu1129.github.io/images/8 bit barrel shifter.jpg'>"
+excerpt: "Implemented an 8 bit barrel shifter using Cadence Virtuoso<br/><img src='https://justinhsu1129.github.io/jhsu1129.github.io/images/8%20bit%20barrel%20shifter%20circuit.jpg'>"
 collection: portfolio
 ---
 
