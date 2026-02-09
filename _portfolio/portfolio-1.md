@@ -1,6 +1,6 @@
 ---
 title: "8 Bit Barrel Shifter"
-excerpt: "Implemented an 8 bit barrel shifter using Cadence Virtuoso<br/><img src='/images/8 bit barrel shifter.jpg'>"
+excerpt: "Implemented an 8 bit barrel shifter using Cadence Virtuoso<br/><img src='https://justinhsu1129.github.io/jhsu1129.github.io/images/8 bit barrel shifter.jpg'>"
 collection: portfolio
 ---
 
@@ -12,13 +12,13 @@ Verified timing and logical functionality using Cadence Spectre, performing corn
 
 Achieved physical verification closure by passing all DRC, LVS, and antenna checks.
 
-![8 Bit Barrel Shifter Result](/images/8%20bit%20barrel%20shifter.jpg)
+![8 Bit Barrel Shifter Result](https://justinhsu1129.github.io/jhsu1129.github.io/images/8%20bit%20barrel%20shifter.jpg)
 
-![8 Bit Barrel Shifter Waveform](/images/8%20bit%20barrel%20shifter%20waveform.jpg)
+![8 Bit Barrel Shifter Waveform](https://justinhsu1129.github.io/jhsu1129.github.io/images/8%20bit%20barrel%20shifter%20waveform.jpg)
 
-![8 Bit Barrel Shifter Schematic](/images/8%20bit%20barrel%20shifter%20circuit.jpg)
+![8 Bit Barrel Shifter Schematic](https://justinhsu1129.github.io/jhsu1129.github.io/images/8%20bit%20barrel%20shifter%20circuit.jpg)
 
-![3-To-8 Decoder Layout](/images/3-8%20decoder%20layout.jpg)
+![3-To-8 Decoder Layout](https://justinhsu1129.github.io/jhsu1129.github.io/images/3-8%20decoder%20layout.jpg)
 
-![3-To-8 DecoderWaveform](/images/decoder%20waveform.jpg)
+![3-To-8 DecoderWaveform]https://justinhsu1129.github.io/jhsu1129.github.io(/images/decoder%20waveform.jpg)
 
