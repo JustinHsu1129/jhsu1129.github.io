@@ -1,6 +1,6 @@
 ---
 title: "Systolic Matrix Multiplier"
-excerpt: "Designed an 8x8 systolic matrix multiplier in Verilog and carried through physical design flow with OpenLane<br/><img src='https://justinhsu1129.github.io/jhsu1129.github.io/images/Layout.png'>"
+excerpt: "Designed an 8x8 systolic matrix multiplier in Verilog and carried through physical design flow with OpenLane"
 collection: portfolio
 ---
 
