@@ -6,7 +6,7 @@ author_profile: true
 redirect_from:
   - /resume
 ---
-[Download Resume Here]()
+[Download Resume Here](http://jhsu1129.github.io/files/Resume.pdf)
 
 Education
 ======
