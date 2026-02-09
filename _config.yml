@@ -23,7 +23,7 @@ repository               : "https://github.com/JustinHsu1129/jhsu1129.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "headshot.jpg"
   name             : "Justin Hsu"
   pronouns         : # example: "she/her"  
   bio              : "4th Year Electrical Engineering Student"
