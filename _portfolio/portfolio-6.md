@@ -14,4 +14,4 @@ This design was simulated using Verilator for individual functional units and Xc
 
 ![Layout](https://justinhsu1129.github.io/jhsu1129.github.io/images/Pasted%20image%2020250915004236.png)
 
-![Routing Congestion](https://justinhsu1129.github.io/jhsu1129.github.io/images/Pasted%20image%2020250915004236.png/images/Pasted%20image%2020250915223638.png)
+![Routing Congestion](https://justinhsu1129.github.io/jhsu1129.github.io/images/Pasted%20image%2020250915004236.png)

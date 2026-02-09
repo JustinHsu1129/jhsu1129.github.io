@@ -32,6 +32,6 @@ I implemented the PODEM algorithm to overcome the limitations of the classic D-A
 
 * Coverage Analysis: The framework provides a comprehensive report on fault coverage percentage, identifying any "undetectable" faults caused by logical redundancies within the CLB architecture.
 
-![Presentation](https://justinhsu1129.github.io/jhsu1129.github.io/files/Creating%20a%20tool%20for%20FPGA%20Design%20Verification-1.pdf)
+[Presentation](https://justinhsu1129.github.io/jhsu1129.github.io/files/Creating%20a%20tool%20for%20FPGA%20Design%20Verification-1.pdf)
 
-![Report](https://justinhsu1129.github.io/jhsu1129.github.io/files/EEC%20283%20Report-2.pdf)
+[Report](https://justinhsu1129.github.io/jhsu1129.github.io/files/EEC%20283%20Report-2.pdf)

@@ -14,4 +14,4 @@ Both of the designs shown below are full RTL-to-GDSII flows done exclusively in 
 
 ![Layout](https://justinhsu1129.github.io/jhsu1129.github.io/images/Layout.png)
 
-![Routing Congestion](https://justinhsu1129.github.io/jhsu1129.github.io/images/Layout.png/images/Routing%20congestion.png)
+![Routing Congestion](https://justinhsu1129.github.io/jhsu1129.github.io/images/Routing%20congestion.png)
