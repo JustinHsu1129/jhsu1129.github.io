@@ -10,7 +10,7 @@ redirect_from:
 
 Education
 ======
-* M.S. in Electrical Engineering, Georgia Institute of Technology, 2028 (expected)
+* M.S. in Electrical Engineering, University of California San Diego, 2028 (expected)
 * B.S. in Electrical Engineering, University of California Davis, 2026 (expected)
 
 Classes Taken
