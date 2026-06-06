@@ -1,35 +1,28 @@
 ---
-title: "Multicore RISC-V Processor"
-excerpt: "Designed a multicore RISC-V processor with big.LITTLE architecture"
+title: "Heterogeneous Multicore RISC-V Processor"
+excerpt: "Designed a multicore RISC-V processor with a big.LITTLE heterogeneous architecture and cache coherence."
 collection: portfolio
+order: 5
 ---
 
-The goal was to develop a scalable RISC-V framework that mimics modern mobile SoC architectures. The system features "Big" cores optimized for raw throughput and "LITTLE" cores tuned for energy efficiency.
+Designed and verified a heterogeneous multi-core processor framework modeling modern mobile SoC architectures. The system features a "Big" core optimized for high-performance execution and a "LITTLE" core optimized for energy-efficient background operations, integrated with a cohesive cache coherence protocol and peripheral interconnects.
 
-1. Heterogeneous Core Design (SystemVerilog)
+### 1. Heterogeneous Core Architectures (SystemVerilog)
 
-Each core was custom-architected to meet specific Power, Performance, and Area (PPA) targets:
+Designed two distinct processor architectures complying with the RISC-V ISA specifications:
+* **The "Big" Core (RV64GC compliant):** A deeply pipelined, in-order execution engine featuring dynamic branch prediction (using a **Gshare predictor** coupled with a Branch Target Buffer) and optimized multi-cycle ALU stages to maximize raw instruction throughput.
+* **The "LITTLE" Core (RV32IM compliant):** A lean, area-efficient 3-stage execution pipeline designed to minimize leakage and switching power, serving as an energy-efficient controller for background operations.
+* **Coherent Cache Hierarchy:** Developed private, set-associative write-back L1 caches for each core. Coherency across the heterogeneous cores is maintained via a custom-designed **MESI (Snooping) Coherence Protocol** managing data transactions over a shared crossbar bus.
 
-* The "Big" Core: A deeply pipelined, high-performance RISC-V implementation featuring advanced branch prediction and optimized ALU stages.
+### 2. Logic Verification (Cadence Xcelium)
 
-* The "LITTLE" Core: A lean, area-efficient design focused on minimizing leakage and switching power, ideal for background tasks.
+* **Instruction Verification:** Executed a comprehensive verification suite in Cadence Xcelium to ensure full compatibility with RISC-V instruction definitions.
+* **Coherence Testing:** Simulated cache hit/miss scenarios, memory eviction loops, and write-back hazards to verify the logical consistency of the MESI coherence protocol.
+* **Bottleneck Analysis:** Monitored pipeline stall rates and cache collision frequency to optimize structural interfaces within the multi-core fabric.
 
-* Custom Cache Hierarchy: I designed specialized L1 caches for each core type, integrated with a Snooping or Directory-based Coherence Protocol to ensure data consistency across the multi-core cluster.
+### 3. VLSI Physical Implementation (OpenLane)
 
-2. Verification & Analysis
-
-To ensure the architectural integrity of the multi-core framework:
-
-* Logic Verification: Used Cadence Xcelium to run extensive testbenches, verifying instruction set compatibility and cache hit/miss scenarios.
-
-* Performance Metrics: Analyzed pipeline stalls and cache contention to fine-tune the interconnect fabric between the heterogeneous cores.
-
-3. Physical Implementation (VLSI Flow)
-
-Moving from RTL to GDSII, I utilized the OpenLane open-source flow to prep the design for fabrication:
-
-* Caravel SoC Harness: Integrated the multi-core cluster into the Efabless Caravel harness, managing the interface between the project logic and the chip's housekeeping functions.
-
-* Custom Layout Scripting: Authored specialized scripts for floorplanning, power grid synthesis, and clock tree synthesis (CTS) to handle the unique power domains required by a big.LITTLE configuration.
-
-* Sign-off: Performed Design Rule Checking (DRC) and Layout vs. Schematic (LVS) to ensure the physical layout matched the verified SystemVerilog intent.
+Completed physical implementation steps to prepare the multi-core SoC for fabrication:
+* **Caravel SoC Harness:** Integrated the multi-core cluster into the **Efabless Caravel harness**, mapping control registers and internal buses to the Caravel system via a Wishbone interconnect.
+* **Custom Floorplanning & Power Routing:** Authored specialized scripts to manage cell placement and power distribution networks, establishing distinct voltage and power domains for active power management.
+* **Sign-off Validation:** Verified physical layout integrity by passing standard **Design Rule Checking (DRC)** and **Layout vs. Schematic (LVS)** comparison sign-offs.

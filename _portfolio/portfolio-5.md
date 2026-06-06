@@ -1,27 +1,29 @@
 ---
-title: "Live Video Feed Edge Detection Accelerator"
-excerpt: "Senior design project-building a edge detection accelerator for Altera DE1-SoC FPGA"
+title: "Real-Time Hardware Video Edge Detection & Template Matching Architectures"
+excerpt: "Designed and compared three distinct fully hardware-accelerated architectures on an Intel Cyclone V FPGA for real-time edge detection and template matching: Score Tree, Systolic Array, and FFT-based convolution."
 collection: portfolio
+order: 2
 ---
 
-This project showcases a high-performance Canny Edge Detection system implemented on the Intel DE1-SoC. By leveraging a Hardware/Software co-design approach, I utilized the Cyclone V FPGA for high-speed image preprocessing and the ARM Cortex-A9 for complex algorithmic decision-making.
+Designed, implemented, and compared three distinct fully hardware-accelerated (100% RTL) architectures on an Intel Cyclone V FPGA to execute real-time Sobel/Canny edge detection and template matching. The project evaluated each architecture across throughput (latency), logical resource utilization (LEs/ALMs), and memory bandwidth to identify the optimal design for varying template sizes.
 
-The goal was to build a real-time image processing pipeline capable of transforming raw video data into clean, tracked edges. The Canny algorithm is computationally demanding, requiring several stages of filtering and analysis. To achieve real-time performance, I partitioned the workload: deterministic pixel math was mapped to Verilog modules, while recursive logic was handled in C.
+### Architecture 1: Pipelined Score Tree Design
+* **Design Philosophy:** Optimizes for low-latency score computation using spatial-domain reduction.
+* **Implementation:**
+  - The incoming video stream is filtered using a pipelined Sobel/Canny edge detector (leveraging dual-port Block RAMs as line buffers to create local sliding windows).
+  - The resulting edge maps feed a **pipelined adder/score tree reduction network** to evaluate template matches.
+  - The score tree features a balanced binary tree pipeline, minimizing critical path logic depth and maximizing operating frequency. This allows the system to compute peak correlation coordinates within standard video timing constraints.
 
-1. Hardware Acceleration (Verilog)
+### Architecture 2: 2D Systolic Array Design
+* **Design Philosophy:** Optimizes for high data reuse and minimal memory bandwidth.
+* **Implementation:**
+  - Configured a **2D grid of hardware Processing Elements (PEs)** running a **weight-stationary dataflow pattern**.
+  - Template weights are locked in local PE registers, while edge-detected pixel streams flow horizontally and vertically through the array.
+  - By utilizing local, neighbor-to-neighbor PE buffers, this architecture minimizes external memory access, keeping power consumption low and preventing memory-bus bottlenecks.
 
-The FPGA fabric handles the "heavy lifting" of the stream-based pixel operations.
-
-* Gaussian Blur & 11x11 Convolution: To suppress noise, I designed a versatile 2-D convolution engine. It utilizes a series of Line Buffers to create a sliding window, allowing for an 11x11 Gaussian kernel.
-
-* Sobel Gradient Module: This module calculates the intensity gradients in both x and y directions. By calculating the magnitude and direction in hardware, the system identifies potential edge candidates at wire speed.
-
-* Video Effects: I integrated a custom Vignetting module that applies a radial intensity mask to the video feed, demonstrating the ability to stack multiple real-time DSP effects.
-
-2. Software Logic (C/HPS)
-
-The final stage of the Canny algorithm—Hysteresis Edge Tracking—is difficult to implement in pure hardware because it requires searching through neighboring pixels to connect edge segments.
-
-* HPS Integration: I mapped the FPGA’s processed frame buffer into the ARM processor’s memory space.
-
-* Hysteresis Algorithm: The C code scans the gradient data, using dual-thresholding to distinguish between "strong" and "weak" edges. It then performs a connectivity analysis to preserve weak pixels only if they are connected to strong ones, effectively eliminating noise while maintaining edge continuity.
+### Architecture 3: FFT-Based Frequency Domain Convolution Design
+* **Design Philosophy:** Optimizes for large template sizes where spatial-domain correlation becomes computationally prohibitive.
+* **Implementation:**
+  - Implemented a pipelined **Radix-2/Radix-4 Fast Fourier Transform (FFT) hardware accelerator** and corresponding Inverse FFT (IFFT) processor.
+  - The design transforms both the video frame and the template into the frequency domain, performs fast point-wise multiplication, and applies the IFFT to reconstruct the spatial correlation map.
+  - Because frequency-domain convolution complexity is independent of template size, this design provides stable, high-throughput execution for large search templates.

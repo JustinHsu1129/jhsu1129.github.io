@@ -1,16 +1,26 @@
 ---
-title: "8 Bit Barrel Shifter"
-excerpt: "Implemented an 8 bit barrel shifter using Cadence Virtuoso"
+title: "8-Bit Custom Barrel Shifter Design"
+excerpt: "Designed and laid out a custom high-performance 8-bit barrel shifter and decoder in Cadence Virtuoso, achieving physical verification sign-off (DRC/LVS)."
 collection: portfolio
+order: 8
 ---
 
-Designed and laid out a high performance 8 bit barrel shifter and a support 3-to-8 decoder using Cadence Virtuoso. The project involved the full custom physical design flow, from schematic capture and transistor level simulation to manual layout and physical verification.
+Designed and laid out a high-performance custom 8-bit barrel shifter and a supporting 3-to-8 binary decoder. The design flow encompassed schematic capture, transistor-level simulation, manual physical layout, and full physical verification closure using Cadence Virtuoso and Spectre.
 
-I performed manual cell-level layout, focusing on symmetrical routing optimal transistor sizing, and efficient area utilization to minimize parasitics and ensure functionality.
+### 1. Circuit Topology & Design Decisions
 
-Verified timing and logical functionality using Cadence Spectre, performing corner analysis to ensure robust performance across various voltage and temperature conditions.
+* **Logic Style:** Implemented shift logic using a multiplexer-based architecture structured with custom **transmission-gate pass-transistor logic (TG-PTL)**. Transmission gates were selected to ensure full-swing logic outputs and high noise margins while significantly reducing the transistor count compared to standard complementary CMOS multiplexers.
+* **Decoder Interface:** Designed a supporting 3-to-8 static CMOS decoder to decode shift-select signals, optimizing gate-sizing ratios to drive the transmission-gate select inputs without introducing excessive gate propagation delay.
 
-Achieved physical verification closure by passing all DRC, LVS, and antenna checks.
+### 2. Manual Physical Layout & Optimization
+
+* **Parasitic Minimization:** Conducted manual cell-level layout with a strong focus on symmetry and metal routing optimization. Wires were routed carefully to minimize parasitics and balance delay times across all shift paths.
+* **Design Rule Guidelines:** Managed transistor sizing ratios (P/N ratio tuning) to optimize rise/fall symmetries. Grouped PMOS and NMOS devices in common wells and aligned standard cell heights, ensuring clean routing channels and avoiding latch-up issues.
+
+### 3. Verification & Sign-Off Results
+
+* **Functional Verification (Spectre):** Simulated the design under typical and worst-case corners in Cadence Spectre. Waveform analysis verified exact shift timing, clean signal transitions, and robust operation across voltage variations.
+* **Physical Verification:** Achieved full sign-off closure by passing all **Design Rule Checking (DRC)**, **Layout vs. Schematic (LVS)** comparison checks, and antenna checks, confirming error-free fabrication readiness.
 
 ![8 Bit Barrel Shifter Result](https://justinhsu1129.github.io/jhsu1129.github.io/images/8%20bit%20barrel%20shifter.jpg)
 
@@ -21,4 +31,3 @@ Achieved physical verification closure by passing all DRC, LVS, and antenna chec
 ![3-To-8 Decoder Layout](https://justinhsu1129.github.io/jhsu1129.github.io/images/3-8%20decoder%20layout.jpg)
 
 ![3-To-8 DecoderWaveform](https://justinhsu1129.github.io/jhsu1129.github.io/images/decoder%20waveform.jpg)
-
