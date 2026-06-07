@@ -27,10 +27,12 @@ author:
   name             : "Justin Hsu"
   pronouns         : # example: "she/her"  
   bio              : "4th Year Electrical Engineering Student"
-  location         : "California"
+  location         : "Davis, California"
   employer         : "UC Davis"
   uri              : 
   email            : "jhsu2022@gmail.com"
+  github           : "JustinHsu1129"
+  linkedin         : "jhsu2022"
   links:
     - label: "LinkedIn"
       url: "https://www.linkedin.com/in/jhsu2022/"

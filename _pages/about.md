@@ -9,11 +9,6 @@ redirect_from:
 
 I am a fourth year Electrical Engineering student at UC Davis with plans to pursue a Master degree in electrical engineering. I am broadly interested in physical design and VLSI. I am particularly interested in accelerator design for machine learning algorithms and low power IC design. My work focuses on the intersection between computer architecture and physical implementation. I am driven by the challenge of designing domain specific architectures, and specifically aiming to achieve maximum performance in a low power package.
 
-Socials
-======
-* [Github](https://github.com/JustinHsu1129)
-* [LinkedIn](https://www.linkedin.com/in/jhsu2022/)
-
 Work Experience
 ======
 1. RTL Design Engineer-Lotus Communication Systems
