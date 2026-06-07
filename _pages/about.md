@@ -18,3 +18,10 @@ Work Experience
 2. PCB Design Engineer-Lotus Communication Systems
 * I designed a 4 layer PCB for a high frequency (~10GHz range) mixed signal two channel block up/down converter from schematics to physically soldering the components onto the board. Designing the schematics from OrCad, I was a key contributor to parts selection, and managed the bill of materials for sourcing availability. After, I designed the PCB using PADS. I carefully implemented a split grounding scheme and carefully managed return paths to prevent noise leakage from the digital blocks from coupling into the RF front end.
 * I designed multiple sub-modules of the PCB, including a custom loop filter, digital microcontroller control block, and RF block. This modular design strategy allowed more effective isolation of critical RF signal paths, and greatly helped when designing the power and ground planes.
+
+Featured Projects
+======
+* [FPGA-Accelerated Quantized CNN](/portfolio/portfolio-11/): Co-designed a 4-bit power-of-two quantized CNN accelerator on an Intel DE1-SoC FPGA for MNIST digit recognition using PyTorch and parallel systolic arrays.
+* [Real-Time Video Edge Detection & Template Matching](/portfolio/portfolio-5/): Designed and compared three distinct RTL hardware architectures (Score Tree, Systolic Array, and FFT-based convolution) on an Intel Cyclone V FPGA.
+* [32-Bit Low-Power Square Root Carry Select Adder](/portfolio/portfolio-8/): Designed and simulated a low-power, mirror-cell-based 32-bit square root carry select adder in Cadence Virtuoso and Spectre, optimizing for sub-threshold ($0.32\text{V}$) operation.
+* [RISC-V Cache Performance Analysis](/portfolio/portfolio-9/): Evaluated L1 cache parameters (associativity and block size) for a CVA6 RISC-V core using Chipyard, Synopsys Design Compiler, and CACTI.

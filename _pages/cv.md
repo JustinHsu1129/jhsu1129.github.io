@@ -8,6 +8,13 @@ redirect_from:
 ---
 [Download Resume Here](https://justinhsu1129.github.io/jhsu1129.github.io/files/Resume.pdf)
 
+Technical Skills
+======
+* **Hardware Description & Scripting:** SystemVerilog, Verilog, VHDL, Chisel (Scala), Python, C/C++, MATLAB, Tcl/Bash
+* **EDA & CAD Toolchains:** Cadence Virtuoso, Cadence Spectre, Cadence Xcelium, Synopsys Design Compiler, OpenLane/OpenLane2, Altera Quartus Prime, gem5, PADS, OrCAD Schematic Capture
+* **Design Methodologies:** RTL Logic Design, Custom Physical Layout, ASIC Synthesis & Place-and-Route (P&R), Static Timing Analysis (STA), Design Verification (DV), Fault Modeling (ATPG/PODEM), PCB Routing (high-frequency/mixed-signal)
+* **Buses & Protocols:** AXI-Stream, AXI-Lite, Wishbone, SPI, I2C, UART
+
 Education
 ======
 * M.S. in Electrical Engineering, Georgia Institute of Technology, 2028 (expected)
