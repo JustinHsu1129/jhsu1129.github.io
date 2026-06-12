@@ -22,7 +22,7 @@ To balance area, power, and propagation delay, a heterogeneous square root carry
 ### 3. Simulation & Low-Power Metrics (Spectre)
 
 Spectre simulations verified correct operation across a wide voltage range down to the sub-threshold region:
-* **Sub-Threshold Operation:** Determined the optimal sub-threshold supply voltage to be **$0.32\text{V}$**.
+* **Sub-Threshold Operation:** Determined the optimal sub-threshold supply voltage to be **0.32V**.
   - **Critical Path Delay:** 7.43ns
   - **Average Total Power:** 2.902443*10^-6W
   - **Power-Delay Product (PDP):** 29.02fJ

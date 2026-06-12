@@ -21,7 +21,7 @@ Work Experience
 
 Featured Projects
 ======
-* [FPGA-Accelerated Quantized CNN](/portfolio/portfolio-11/): Co-designed a 4-bit power-of-two quantized CNN accelerator on an Intel DE1-SoC FPGA for MNIST digit recognition using PyTorch and parallel systolic arrays.
+* [FPGA-Accelerated Quantized CNN](/portfolio/portfolio-11/): Co-designed a 4-bit quantized CNN accelerator on an Intel DE1-SoC FPGA for MNIST digit recognition using PyTorch, comparing PPA metrics across four systolic array dataflows.
 * [Real-Time Video Edge Detection & Template Matching](/portfolio/portfolio-5/): Designed and compared three distinct RTL hardware architectures (Score Tree, Systolic Array, and FFT-based convolution) on an Intel Cyclone V FPGA.
-* [32-Bit Low-Power Square Root Carry Select Adder](/portfolio/portfolio-8/): Designed and simulated a low-power, mirror-cell-based 32-bit square root carry select adder in Cadence Virtuoso and Spectre, optimizing for sub-threshold 0.32V operation.
+* [32-Bit Low-Power Square Root Carry Select Adder](/portfolio/portfolio-8/): Designed and simulated a low-power, mirror-cell-based 32-bit square root carry select adder in Cadence Virtuoso and Spectre, optimizing for sub-threshold (0.32V) operation.
 * [RISC-V Cache Performance Analysis](/portfolio/portfolio-9/): Evaluated L1 cache parameters (associativity and block size) for a CVA6 RISC-V core using Chipyard, Synopsys Design Compiler, and CACTI.

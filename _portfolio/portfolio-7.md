@@ -17,9 +17,9 @@ To support accurate fault simulation, the tool models the standard primitives of
 ### 2. 5-Valued Logic & PODEM ATPG Heuristics
 
 Implemented the PODEM algorithm to overcome structural reconvergent fan-out issues common in FPGA routing architectures:
-* **Logic System:** Utilized a **5-valued logic system** ($0, 1, X, D, \bar{D}$) to represent fault excitation and fault propagation states.
+* **Logic System:** Utilized a **5-valued logic system** (0, 1, X, D, D-bar) to represent fault excitation and fault propagation states.
 * **Backtracing:** Implemented recursive backtracing from the fault site to primary inputs, utilizing cost-based heuristics to determine optimal input assignments.
-* **D-Drive Propagation:** Excites the targeted fault (e.g. Stuck-At-0) and propagates the resulting $D$ or $\bar{D}$ state through the BLE's internal LUTs and multiplexers until it reaches an observable primary output.
+* **D-Drive Propagation:** Excites the targeted fault (e.g. Stuck-At-0) and propagates the resulting D or D-bar state through the BLE's internal LUTs and multiplexers until it reaches an observable primary output.
 
 ### 3. Fault Simulation & Collapsing
 

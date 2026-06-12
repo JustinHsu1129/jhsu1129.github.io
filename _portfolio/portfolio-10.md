@@ -12,7 +12,7 @@ Developed a multi-layered verification framework to validate a 32-bit RISC-V ALU
 * **RTL Development:** Designed a robust 32-bit RISC-V compliant ALU in Verilog, adding M-extension operations (multiplication, division, modulo). The ALU decodes the RISC-V opcode to select execution units and generates appropriate status flags (zero, overflow, division-by-zero).
 * **Self-Checking Testbench:** Built an automated Verilog testbench that dynamically compared RTL execution outputs against a software-based golden reference model.
   - **Test Coverage:** Verified 12 core ALU functions across 56 targeted tests, applying random values and boundary edge cases (e.g. division-by-zero, maximum overflow).
-  - **Results:** Achieved a $100\%$ pass rate in just $0.053\text{ seconds}$ of simulation.
+  - **Results:** Achieved a 100% pass rate in just 0.053 seconds of simulation.
 
 ### 2. Software-Based Structural Simulator (Python)
 
