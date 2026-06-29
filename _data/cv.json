@@ -4,7 +4,7 @@
     "email": "jhsu2022@gmail.com",
     "phone": "978-494-9267",
     "website": "https://justinhsu1129.github.io/jhsu1129.github.io/",
-    "summary": "Fourth year Electrical Engineering student at UC Davis",
+    "summary": "Electrical Engineering Master's Student at Georgia Institute of Technology",
     "location": {
       "address": "",
       "postalCode": "",
@@ -28,23 +28,23 @@
   "work": [],
   "education": [
     {
-      "institution": "Georgia Tech",
-      "area": "M.S. in Electrical Engineering-VLSI and Digital Design",
+      "institution": "Georgia Institute of Technology",
+      "area": "M.S. in Electrical Engineering - VLSI and Digital Design",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2028 (expected)",
+      "startDate": "2026",
+      "endDate": "2028",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "UD Davis",
+      "institution": "University of California, Davis",
       "area": "B.S. in Electrical Engineering",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2026 (expected)",
+      "startDate": "2022",
+      "endDate": "2026",
       "gpa": null,
       "courses": []
-    },
+    }
   ],
   "skills": [],
   "languages": [],

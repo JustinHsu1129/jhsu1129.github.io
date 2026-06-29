@@ -13,7 +13,7 @@ The multiplier features a 2D grid of processing elements (PEs) optimized for par
 * **Array Design:** Configured as a **2D systolic array** running a **weight-stationary dataflow pattern**. This pattern keeps weights locked in local PE registers, minimizing interconnect switching activity and external memory bandwidth during vector multiplications.
 * **Structural Implementation:** Custom-coded each PE to maximize pipeline throughput:
   - **Multiplier Unit:** Implemented **Radix-4 Booth encoding** combined with a **Wallace Tree reduction network** to compile partial products with minimal delay.
-  - **Accumulator Unit:** Utilized a prefix-tree **Radix-2 Kogge-Stone adder** to finalize carry propagation.
+  - **Accumulator Unit:** Utilized a high-speed **Carry Lookahead Adder (CLA)** to finalize carry propagation.
 * **Behavioral Implementation:** Designed a second version of the array using behavioral RTL. This allowed the logic synthesizer to map arithmetic operators freely, resulting in a more area-efficient layout compared to the highly optimized structural design.
 
 ### 2. VLSI Physical Design (OpenLane2)

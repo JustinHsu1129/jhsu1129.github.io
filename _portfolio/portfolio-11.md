@@ -1,11 +1,11 @@
 ---
-title: "FPGA-Accelerated Quantized CNN for Handwritten Digit Recognition"
-excerpt: "Designed and implemented a quantized LeNet-5 CNN accelerator on an Intel DE1-SoC FPGA, comparing PPA metrics across four systolic array dataflows."
+title: "Handwritten Number CNN Accelerator"
+excerpt: "Architected a LeNet-5 CNN accelerator on an Altera DE1-SoC FPGA and executed an RTL-to-GDSII flow under Skywater 130nm PDK."
 collection: portfolio
 order: 1
 ---
 
-Designed, implemented, and verified a custom hardware accelerator on the Terasic DE1-SoC (Cyclone V) FPGA to execute LeNet-5 Convolutional Neural Network (CNN) inference. The project involved PyTorch training, post-training quantization, and a comprehensive comparative analysis of four distinct systolic array hardware architectures coded in SystemVerilog.
+Architected, implemented, and verified a custom 2-layer LeNet-5 Convolutional Neural Network (CNN) accelerator on the Altera DE1-SoC FPGA. The project involved PyTorch training, post-training quantization, a microarchitectural trade-off analysis of four systolic array dataflows in SystemVerilog, and a complete RTL-to-GDSII physical implementation flow.
 
 ### 1. CNN Model & 4-Bit Quantization (QAT)
 
@@ -41,6 +41,13 @@ Physical board simulations and hardware measurements yielded the following perfo
 
 * **Hardware Accuracy:** Validated on-board using a test suite of 20 MNIST digits, achieving a **95% accuracy rate** (19/20 correct classifications).
 * **Key Findings:** **Output Stationary** and **Weight Stationary** architectures provided the best throughput. Output Stationary achieved the highest energy and area efficiency (lowest compute time of 8.85 ms, lowest power of 546.59 mW, and lowest logic utilization of 20%).
+
+### 5. Physical Design & ASIC Flow (Skywater 130nm)
+
+To prepare the CNN accelerator for chip implementation, we drove a full-custom physical design flow:
+* **ASIC Synthesis & Floorplanning:** Synthesized the accelerator under the **Skywater 130nm PDK** using **Synopsys Design Compiler**. Implemented clock gating and multi-voltage domain floorplanning via **Cadence Innovus** to optimize the power grid.
+* **PPA Improvements:** Achieved a target operational clock frequency of **100 MHz** and reduced overall power consumption by **20%** through structural optimizations.
+* **Physical Verification:** Verified the design and microarchitecture layout through complete RTL-to-GDSII physical verification and post-layout timing closure, ensuring robust hardware-software integration for the larger neural network system.
 
 [Paper / Report](https://justinhsu1129.github.io/jhsu1129.github.io/files/EEC%20289Q%20Project%20Paper.docx.pdf)
 

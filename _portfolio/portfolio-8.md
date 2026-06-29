@@ -1,17 +1,18 @@
 ---
-title: "32-Bit Low-Power Square Root Carry Select Adder"
-excerpt: "Designed and simulated a 32-bit square root carry select adder in Cadence Virtuoso and Spectre, optimizing for low-power operation at sub-threshold Vdd."
+title: "Subthreshold Minimum Energy 32-Bit Adder"
+excerpt: "Designed and simulated a 32-bit Square Root Carry Select Adder (SRCSA) in Cadence Virtuoso and Spectre, achieving 100 MHz at sub-threshold Vdd of 0.32V."
 collection: portfolio
 order: 3
 ---
 
-Designed, simulated, and verified a low-power, high-performance 32-bit Square Root Carry Select Adder using a CMOS mirror adder topology and transmission gate multiplexers in Cadence Virtuoso. The project focused on sub-threshold voltage operation and low-power design verification using Cadence Spectre.
+Designed, simulated, and verified a low-power, high-performance 32-bit Square Root Carry Select Adder (SRCSA) using a CMOS mirror adder topology and transmission gate multiplexers in Cadence Virtuoso. The project focused on sub-threshold voltage operation, custom cell library design with multi-threshold devices, and low-power design verification using Cadence Spectre.
 
 ### 1. Adder Architecture & Circuit Design
 
 To balance area, power, and propagation delay, a heterogeneous square root carry select adder structure was implemented:
 * **Block Topology:** Arranged in a **2-2-3-4-5-6-10** block structure to match the quadratic delay profile of carry-out propagation.
 * **Even & Odd Mirror Cells:** Developed custom mirror adder cells using symmetric layouts to equalize charge times and minimize critical path delay.
+* **Multi-Threshold Devices:** Utilized a strategic mix of multi-threshold devices (**High-Vt**, **Normal-Vt**, and **Low-Vt**) to establish a balanced sub-threshold performance envelope, maintaining active sub-nanosecond delay metrics while mitigating sub-threshold leakage.
 * **Transmission Gate Multiplexers:** Designed high-speed transmission gate multiplexers to perform rapid path selection of carry inputs, reducing propagation delay and static power consumption.
 
 ### 2. Critical Path & Interconnect Parasitics
@@ -22,8 +23,8 @@ To balance area, power, and propagation delay, a heterogeneous square root carry
 ### 3. Simulation & Low-Power Metrics (Spectre)
 
 Spectre simulations verified correct operation across a wide voltage range down to the sub-threshold region:
-* **Sub-Threshold Operation:** Determined the optimal sub-threshold supply voltage to be **0.32V**.
-  - **Critical Path Delay:** 7.43ns
+* **Sub-Threshold Operation:** Achieved a clock frequency of **100 MHz** at an ultra-low supply voltage of **Vdd = 0.32V**.
+  - **Critical Path Delay:** 7.43ns (supporting the 100 MHz clock frequency target)
   - **Average Total Power:** 2.902443*10^-6W
   - **Power-Delay Product (PDP):** 29.02fJ
   - **Energy-Delay Product (EDP):** 2.90*10^-22J

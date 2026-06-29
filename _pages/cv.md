@@ -10,15 +10,14 @@ redirect_from:
 
 Technical Skills
 ======
-* **Hardware Description & Scripting:** SystemVerilog, Verilog, VHDL, Chisel (Scala), Python, C/C++, MATLAB, Tcl/Bash
-* **EDA & CAD Toolchains:** Cadence Virtuoso, Cadence Spectre, Cadence Xcelium, Synopsys Design Compiler, OpenLane/OpenLane2, Altera Quartus Prime, gem5, PADS, OrCAD Schematic Capture
-* **Design Methodologies:** RTL Logic Design, Custom Physical Layout, ASIC Synthesis & Place-and-Route (P&R), Static Timing Analysis (STA), Design Verification (DV), Fault Modeling (ATPG/PODEM), PCB Routing (high-frequency/mixed-signal)
-* **Buses & Protocols:** AXI-Stream, AXI-Lite, Wishbone, SPI, I2C, UART
+* **Languages:** SystemVerilog, Verilog, C, Python, TCL, MATLAB
+* **ASIC/EDA Tools:** Cadence Spectre, Xcelium, Innovus, Virtuoso, Allegro, Synopsys Design Compiler, Siemens PADS, Vivado, Quartus, Verilator, MAGIC, Yosys, KLayout
+* **Technical Competencies:** STA, Layout, PPA Analysis, Logic Design, Low Power Design, HW-SW Co-design, Microsoldering
 
 Education
 ======
-* M.S. in Electrical Engineering, Georgia Institute of Technology, 2028 (expected)
-* B.S. in Electrical Engineering, University of California Davis, 2026 (expected)
+* **Georgia Institute of Technology** — Master of Science in Electrical Engineering (2026 - 2028)
+* **University of California, Davis** — Bachelor of Science in Electrical Engineering (2022 - 2026)
 
 Classes Taken
 ======
